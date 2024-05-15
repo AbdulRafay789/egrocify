@@ -1,12 +1,12 @@
 import { Routes } from '@angular/router';
-import { BodyComponent } from './components/route-c/body.component';
+import { BodyComponent } from './components/body/body.component';
 
 export const routes: Routes = [
   {'path': '', component: BodyComponent},
   {
     'path': 'C',
     loadComponent: () =>
-    import('./components/route-c/body.component').then(
+    import('./components/body/body.component').then(
       (mod) => mod.BodyComponent
     ),
   },

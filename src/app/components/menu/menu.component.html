@@ -73,27 +73,42 @@
   <div class="menu-inner-shadow"></div>
   <ul class="menu-inner py-1">
   @for(item of menuItems; track item){
-  <ng-container *ngFor="let item of menuItems">
-    <li class="menu-item">
-      <a *ngIf="!item.subItems" [href]="item.url" class="menu-link">
-        <i class="menu-icon tf-icons mdi" [ngClass]="item.icon"></i>
-        <div>{{ item.name }}</div>
-      </a>
-      <a *ngIf="item.subItems" href="javascript:void(0);" class="menu-link menu-toggle">
-        <i class="menu-icon tf-icons mdi" [ngClass]="item.icon"></i>
-        <div>{{ item.name }}</div>
-      </a>
-      <ul *ngIf="item.subItems" class="menu-sub">
-        @for(subItem of item.subItems; track subItem){
+    @if (checkRole(item.role)) {
+      <ng-container>
         <li class="menu-item">
-          <a [href]="subItem.url" class="menu-link">
-            <div>{{ subItem.name }}</div>
-          </a>
+          @if (!item.subItems && !item.seperator && checkRole(item.role)) {
+            <a [href]="item.url" class="menu-link">
+              <i class="menu-icon tf-icons mdi" [ngClass]="item.icon"></i>
+              <div>{{ item.name }}</div>
+            </a>
+          }
+          @if (item.subItems && checkRole(item.role)) {
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
+              <i class="menu-icon tf-icons mdi" [ngClass]="item.icon"></i>
+              <div>{{ item.name }}</div>
+            </a>
+          }
+          @if (item.subItems?.length) {
+            <ul class="menu-sub">
+              @for(subItem of item.subItems; track subItem){
+                @if (subItem && checkRole(subItem.role)) {
+                  <li class="menu-item">
+                    <a [href]="subItem.url" class="menu-link">
+                      <div>{{ subItem.name }}</div>
+                    </a>
+                  </li>
+                }
+            }
+            </ul>
+          }
         </li>
-      }
-      </ul>
-    </li>
-  </ng-container>
+        @if (item.seperator && checkRole(item.role)) {
+          <li class="menu-header small text-uppercase">
+            <span class="menu-header-text">{{ item.name }}</span>
+          </li>
+        }
+      </ng-container>
+    }
 }
   </ul>
 </aside>
