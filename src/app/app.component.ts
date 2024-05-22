@@ -1,57 +1,222 @@
 import { MenuComponent } from './components/menu/menu.component';
 import { Component } from '@angular/core';
-import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatSnackBar, } from '@angular/material/snack-bar';
-import { HttpService } from './service/httpservice.service';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MainContentComponent } from './components/main-content/main-content.component';
+import { HeaderComponent } from './components/header/header.component';
+import { Const } from './general/const';
+import { Menu } from './interface/menu';
+import { HttpClientModule } from '@angular/common/http';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,MatSlideToggleModule,CommonModule,RouterLink,RouterModule,MenuComponent,MainContentComponent],
+  imports: [RouterOutlet,MenuComponent,HeaderComponent,MainContentComponent,HttpClientModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'e-grocify';
-  constructor(private snackBar: MatSnackBar,private HttpService: HttpService,public router : Router){}
-
-  showSuccess(message: string): void {
-    this.snackBar.open(message, 'Close', {
-      duration: 3000,
-      panelClass: ['toast-success']
-    });
-  }
-
-  // Display error message
-  showError(message: string): void {
-    this.snackBar.open(message, 'Close', {
-      duration: 3000,
-      panelClass: ['toast-error']
-    });
-  }
+  title = 's';
+  constants = new Const();
+  MenuData: Menu[] = [
+    {
+      name: 'Dashboard',
+      icon: 'mdi-home-outline',
+      url: '',
+      role: this.constants.admin,
+    },
+    {
+      name: 'PRODUCTS MANAGEMENT',
+      icon: '',
+      url: '',
+      role: this.constants.admin,
+      seperator: true
+    },
+    {
+      name: 'Companies',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.admin,
+      subItems: [
+        {
+          name: 'Company List',
+          url: 'Company',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Add Company',
+          url: 'Add-Company',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Brands',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.admin,
+      subItems: [
+        {
+          name: 'Brand List',
+          url: 'Brand',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Add Brand',
+          url: 'Add-Brand',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Products',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.admin,
+      subItems: [
+        {
+          name: 'Product List',
+          url: 'Product',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Add Product',
+          url: 'Add-Product',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Order History',
+      icon: 'mdi-home-outline',
+      url: 'Order-History',
+      role: this.constants.admin,
+    },
+    {
+      name: 'CASH MANAGEMENT',
+      icon: '',
+      url: '',
+      role: this.constants.admin,
+      seperator: true
+    },
+    {
+      name: 'Withdraw Requests',
+      icon: 'mdi-home-outline',
+      url: 'Withdraw',
+      role: this.constants.admin,
+    },
+    {
+      name: 'USERS MANAGEMENT',
+      icon: '',
+      url: '',
+      role: this.constants.admin,
+      seperator: true
+    },
+    {
+      name: 'Users',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.admin,
+      subItems: [
+        {
+          name: 'User List',
+          url: 'User',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Add User',
+          url: 'Add-User',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Packages',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.admin,
+      subItems: [
+        {
+          name: 'Package List',
+          url: 'Package',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Add Package',
+          url: 'Add-Package',
+          role: this.constants.admin,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Dashboard',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+    {
+      name: 'Products',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+    {
+      name: 'Orders',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+    {
+      name: 'Withdraws',
+      icon: 'mdi-window-maximize',
+      url: 'Company',
+      role: this.constants.seller,
+      subItems: [
+        {
+          name: 'Withdraw List',
+          url: 'layouts-without-menu.html',
+          role: this.constants.seller,
+          icon: 'mdi-home-outline',
+        },
+        {
+          name: 'Withdraw Request',
+          url: 'layouts-without-navbar.html',
+          role: this.constants.seller,
+          icon: 'mdi-home-outline',
+        },
+      ]
+    },
+    {
+      name: 'Referrals',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+    {
+      name: 'Subscriptions',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+    {
+      name: 'Profile',
+      icon: 'mdi-home-outline',
+      url: 'Company',
+      role: this.constants.seller,
+    },
+  ];
+  constructor(){}
 
   ngOnInit(): void {
-    this.getCommentsForPost(1); // Assuming postId is 1
-  }
-
-  getCommentsForPost(postId: number): void {
-    this.HttpService.getComments(postId).subscribe(
-      (response) => {
-        console.log('Comments:', response);
-        this.showSuccess('rafay')
-        // Handle the response here
-      },
-      (error) => {
-        console.error('Error fetching comments:', error);
-        // Handle errors here
-      }
-    );
-  }
-
-  route() {
-    this.router.navigate(["A"]);
   }
 
 }

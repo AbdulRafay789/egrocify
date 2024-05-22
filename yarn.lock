@@ -195,7 +195,7 @@
   dependencies:
     "tslib" "^2.3.0"
 
-"@angular/forms@^17.0.0 || ^18.0.0", "@angular/forms@^17.3.0":
+"@angular/forms@^17.0.0", "@angular/forms@^17.0.0 || ^18.0.0", "@angular/forms@^17.3.0":
   "integrity" "sha512-ZoPJMx3O1eKliK6oEUqtKJNqrLwwOLBC5x+zbCHrwJeBB3lbgWXrrnTrFvCXpp3QVERAboZTzZ3XBmHX1o6gmw=="
   "resolved" "https://registry.npmjs.org/@angular/forms/-/forms-17.3.8.tgz"
   "version" "17.3.8"
@@ -3687,6 +3687,11 @@
   "resolved" "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.7.tgz"
   "version" "4.0.7"
 
+"eventemitter3@^5.0.1":
+  "integrity" "sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA=="
+  "resolved" "https://registry.npmjs.org/eventemitter3/-/eventemitter3-5.0.1.tgz"
+  "version" "5.0.1"
+
 "events@^3.2.0":
   "integrity" "sha512-mQw+2fkQbALzQ7V0MY0IqdnXNOeTtP4r0lN9z7AAawCXgqea7bDii20AYrIBrFd/Hx0M2Ocz6S111CaFkUcb0Q=="
   "resolved" "https://registry.npmjs.org/events/-/events-3.3.0.tgz"
@@ -3767,6 +3772,11 @@
   "integrity" "sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q=="
   "resolved" "https://registry.npmjs.org/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz"
   "version" "3.1.3"
+
+"fast-diff@^1.3.0":
+  "integrity" "sha512-VxPP4NqbUjj6MaAOafWeUn2cXWLcCtljklUtZf0Ind4XQ+QPtmA0b18zZy0jIQx+ExRVCR/ZQpBmik5lXshNsw=="
+  "resolved" "https://registry.npmjs.org/fast-diff/-/fast-diff-1.3.0.tgz"
+  "version" "1.3.0"
 
 "fast-glob@^3.2.11", "fast-glob@^3.3.0", "fast-glob@3.3.2":
   "integrity" "sha512-oX2ruAFQwf/Orj8m737Y5adxDQO0LAB7/S5MnxCdTNDd4p6BsyIVsv9JQsATbTSq8KHRpLwIHbVlUNatxd+1Ow=="
@@ -4763,10 +4773,25 @@
   dependencies:
     "p-locate" "^6.0.0"
 
+"lodash-es@^4.17.21":
+  "integrity" "sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw=="
+  "resolved" "https://registry.npmjs.org/lodash-es/-/lodash-es-4.17.21.tgz"
+  "version" "4.17.21"
+
+"lodash.clonedeep@^4.5.0":
+  "integrity" "sha512-H5ZhCF25riFd9uB5UCkVKo61m3S/xZk1x4wA6yp/L3RFP6Z/eHH1ymQcGLo7J3GMPfm0V/7m1tryHuGVxpqEBQ=="
+  "resolved" "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz"
+  "version" "4.5.0"
+
 "lodash.debounce@^4.0.8":
   "integrity" "sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow=="
   "resolved" "https://registry.npmjs.org/lodash.debounce/-/lodash.debounce-4.0.8.tgz"
   "version" "4.0.8"
+
+"lodash.isequal@^4.5.0":
+  "integrity" "sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ=="
+  "resolved" "https://registry.npmjs.org/lodash.isequal/-/lodash.isequal-4.5.0.tgz"
+  "version" "4.5.0"
 
 "lodash@^4.17.21":
   "integrity" "sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg=="
@@ -5390,6 +5415,11 @@
     "ssri" "^10.0.0"
     "tar" "^6.1.11"
 
+"parchment@^3.0.0":
+  "integrity" "sha512-HUrJFQ/StvgmXRcQ1ftY6VEZUq3jA2t9ncFN4F84J/vN0/FPpQF+8FKXb3l6fLces6q0uOHj6NJn+2xvZnxO6A=="
+  "resolved" "https://registry.npmjs.org/parchment/-/parchment-3.0.0.tgz"
+  "version" "3.0.0"
+
 "parent-module@^1.0.0":
   "integrity" "sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g=="
   "resolved" "https://registry.npmjs.org/parent-module/-/parent-module-1.0.1.tgz"
@@ -5591,6 +5621,13 @@
     "picocolors" "^1.0.0"
     "source-map-js" "^1.0.2"
 
+"primeng@^17.17.0":
+  "integrity" "sha512-+lIfG2nVve5GJQXGBDi2YeVabg6E9RmG67LDw9Ol8XvMWuHwJXQAGfO+AKPhPPzFSdb1j2v44uJemuNcJLXUiw=="
+  "resolved" "https://registry.npmjs.org/primeng/-/primeng-17.17.0.tgz"
+  "version" "17.17.0"
+  dependencies:
+    "tslib" "^2.3.0"
+
 "proc-log@^3.0.0":
   "integrity" "sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A=="
   "resolved" "https://registry.npmjs.org/proc-log/-/proc-log-3.0.0.tgz"
@@ -5658,6 +5695,25 @@
   "integrity" "sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A=="
   "resolved" "https://registry.npmjs.org/queue-microtask/-/queue-microtask-1.2.3.tgz"
   "version" "1.2.3"
+
+"quill-delta@^5.1.0":
+  "integrity" "sha512-X74oCeRI4/p0ucjb5Ma8adTXd9Scumz367kkMK5V/IatcX6A0vlgLgKbzXWy5nZmCGeNJm2oQX0d2Eqj+ZIlCA=="
+  "resolved" "https://registry.npmjs.org/quill-delta/-/quill-delta-5.1.0.tgz"
+  "version" "5.1.0"
+  dependencies:
+    "fast-diff" "^1.3.0"
+    "lodash.clonedeep" "^4.5.0"
+    "lodash.isequal" "^4.5.0"
+
+"quill@^2.0.2":
+  "integrity" "sha512-QfazNrhMakEdRG57IoYFwffUIr04LWJxbS/ZkidRFXYCQt63c1gK6Z7IHUXMx/Vh25WgPBU42oBaNzQ0K1R/xw=="
+  "resolved" "https://registry.npmjs.org/quill/-/quill-2.0.2.tgz"
+  "version" "2.0.2"
+  dependencies:
+    "eventemitter3" "^5.0.1"
+    "lodash-es" "^4.17.21"
+    "parchment" "^3.0.0"
+    "quill-delta" "^5.1.0"
 
 "randombytes@^2.1.0":
   "integrity" "sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ=="
@@ -5898,7 +5954,7 @@
   dependencies:
     "queue-microtask" "^1.2.2"
 
-"rxjs@^6.5.3 || ^7.4.0", "rxjs@^7.8.1", "rxjs@~7.8.0", "rxjs@7.8.1":
+"rxjs@^6.0.0 || ^7.8.1", "rxjs@^6.5.3 || ^7.4.0", "rxjs@^7.8.1", "rxjs@~7.8.0", "rxjs@7.8.1":
   "integrity" "sha512-AA3TVj+0A2iuIoQkWEK/tqFjBq2j+6PO6Y0zJcvzLAFhEFIO3HL0vls9hWLncZbAAbK0mar7oZ4V079I/qPMxg=="
   "resolved" "https://registry.npmjs.org/rxjs/-/rxjs-7.8.1.tgz"
   "version" "7.8.1"

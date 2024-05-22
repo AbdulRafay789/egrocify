@@ -176,7 +176,27 @@
     }
   }
 </style>
-  <router-outlet></router-outlet>
+<div class="layout-wrapper layout-content-navbar">
+  <div class="layout-container">
+    <app-menu [menuItems]="MenuData"></app-menu>
+    <div class="layout-page">
+      <app-header></app-header>
+      <!-- <app-main-content></app-main-content> -->
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+  <div class="layout-overlay layout-menu-toggle"></div>
+</div>
+
+<!-- <div class="buy-now">
+  <a
+    href="https://themeselection.com/item/materio-bootstrap-html-admin-template/"
+    target="_blank"
+    class="btn btn-danger btn-buy-now"
+    >Upgrade to Pro</a
+  >
+</div> -->
+<!-- <router-outlet></router-outlet> -->
 <!-- <div class="layout-wrapper layout-content-navbar">
   <div class="layout-container">
     <app-menu></app-menu>
