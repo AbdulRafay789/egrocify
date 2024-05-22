@@ -15372,6 +15372,7 @@ html:not(.layout-menu-fixed) .menu-inner-shadow {
 .layout-menu {
   position: relative;
   flex: 1 0 auto;
+  height: 100%;
 }
 .layout-menu a:focus-visible {
   outline: none;

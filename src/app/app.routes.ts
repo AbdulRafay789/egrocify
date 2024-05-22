@@ -67,7 +67,7 @@ export const routes: Routes = [
         ),
     },
     {
-      path: 'Withdraw',
+      path: 'Withdraw-Request',
       loadComponent: () =>
         import('./components/withdraw/admin/withdraw-request/withdraw-request.component').then(
           (mod) => mod.WithdrawRequestComponent
@@ -99,6 +99,56 @@ export const routes: Routes = [
       loadComponent: () =>
         import('./components/package/add-package/add-package.component').then(
           (mod) => mod.AddPackageComponent
+        ),
+    },
+    //seller
+    {
+      path: 'Order',
+      loadComponent: () =>
+        import('./components/order/seller/seller-order/seller-order.component').then(
+          (mod) => mod.SellerOrderComponent
+        ),
+    },
+    {
+      path: 'Withdraw',
+      loadComponent: () =>
+        import('./components/withdraw/seller/withdraw-list/withdraw-list.component').then(
+          (mod) => mod.WithdrawListComponent
+        ),
+    },
+    {
+      path: 'Add-Withdraw',
+      loadComponent: () =>
+        import('./components/withdraw/seller/add-withdraw/add-withdraw.component').then(
+          (mod) => mod.AddWithdrawComponent
+        ),
+    },
+    {
+      path: 'Referrals',
+      loadComponent: () =>
+        import('./components/referrals/referrals.component').then(
+          (mod) => mod.ReferralsComponent
+        ),
+    },
+    {
+      path: 'Subscriptions',
+      loadComponent: () =>
+        import('./components/subscriptions/subscriptions.component').then(
+          (mod) => mod.SubscriptionsComponent
+        ),
+    },
+    {
+      path: 'Profile',
+      loadComponent: () =>
+        import('./components/profile/profile.component').then(
+          (mod) => mod.ProfileComponent
+        ),
+    },
+    {
+      path: 'Update-Password',
+      loadComponent: () =>
+        import('./components/profile/update-password/update-password.component').then(
+          (mod) => mod.UpdatePasswordComponent
         ),
     },
 

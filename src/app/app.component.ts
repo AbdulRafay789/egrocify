@@ -107,7 +107,7 @@ export class AppComponent {
     {
       name: 'Withdraw Requests',
       icon: 'mdi-home-outline',
-      url: 'Withdraw',
+      url: 'Withdraw-Request',
       role: this.constants.admin,
     },
     {
@@ -157,39 +157,40 @@ export class AppComponent {
         },
       ]
     },
+    //seller
     {
       name: 'Dashboard',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: '',
       role: this.constants.seller,
     },
     {
       name: 'Products',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: '',
       role: this.constants.seller,
     },
     {
       name: 'Orders',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: 'Order',
       role: this.constants.seller,
     },
     {
       name: 'Withdraws',
       icon: 'mdi-window-maximize',
-      url: 'Company',
+      url: '',
       role: this.constants.seller,
       subItems: [
         {
           name: 'Withdraw List',
-          url: 'layouts-without-menu.html',
+          url: 'Withdraw',
           role: this.constants.seller,
           icon: 'mdi-home-outline',
         },
         {
           name: 'Withdraw Request',
-          url: 'layouts-without-navbar.html',
+          url: 'Add-Withdraw',
           role: this.constants.seller,
           icon: 'mdi-home-outline',
         },
@@ -198,19 +199,19 @@ export class AppComponent {
     {
       name: 'Referrals',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: 'Referrals',
       role: this.constants.seller,
     },
     {
       name: 'Subscriptions',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: 'Subscriptions',
       role: this.constants.seller,
     },
     {
       name: 'Profile',
       icon: 'mdi-home-outline',
-      url: 'Company',
+      url: 'Profile',
       role: this.constants.seller,
     },
   ];

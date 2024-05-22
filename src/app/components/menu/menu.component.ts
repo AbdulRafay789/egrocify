@@ -2,11 +2,12 @@ import { CommonModule, NgClass } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { Menu } from '../../interface/menu';
 import { Const } from '../../general/const';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
   standalone: true,
-  imports: [NgClass,CommonModule],
+  imports: [NgClass,CommonModule,RouterLinkActive,RouterLink],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.scss'
 })
