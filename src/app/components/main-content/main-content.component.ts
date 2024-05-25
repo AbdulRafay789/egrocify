@@ -6,6 +6,7 @@ import { HeaderComponent } from '../header/header.component';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpService } from '../../service/httpservice.service';
 import { HttpClientModule } from '@angular/common/http';
+import { Const } from '../../general/const';
 
 @Component({
   selector: 'app-main-content',
@@ -24,7 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 })
 export class MainContentComponent implements OnInit {
   dashboarddata: any;
-
+  AppConst = new Const
   constructor(
     private snackBar: MatSnackBar,
     private httpService: HttpService, // Corrected capitalization
@@ -56,7 +57,7 @@ export class MainContentComponent implements OnInit {
       (response) => {
         console.log('Comments:', response);
         this.dashboarddata = response;
-        this.showSuccess('rafay');
+        this.showSuccess('API Called');
       },
       (error) => {
         console.error('Error fetching comments:', error);

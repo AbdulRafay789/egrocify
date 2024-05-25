@@ -167,7 +167,7 @@ export class AppComponent {
     {
       name: 'Products',
       icon: 'mdi-home-outline',
-      url: '',
+      url: 'Products',
       role: this.constants.seller,
     },
     {

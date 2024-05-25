@@ -1,4 +1,4 @@
 export class Const {
-  admin: boolean = true;
-  seller: boolean = false;
+  admin: boolean = false;
+  seller: boolean = true;
 }

@@ -151,6 +151,13 @@ export const routes: Routes = [
           (mod) => mod.UpdatePasswordComponent
         ),
     },
+    {
+      path: 'Products',
+      loadComponent: () =>
+        import('./components/product/seller/product-list/product-list.component').then(
+          (mod) => mod.ProductListComponent
+        ),
+    },
 
   { path: '**', redirectTo: '' },
 ];
