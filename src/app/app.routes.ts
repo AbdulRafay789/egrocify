@@ -158,6 +158,13 @@ export const routes: Routes = [
           (mod) => mod.ProductListComponent
         ),
     },
+    {
+      path: 'Product-Detail',
+      loadComponent: () =>
+        import('./components/product/seller/product-detail/product-detail.component').then(
+          (mod) => mod.ProductDetailComponent
+        ),
+    },
 
   { path: '**', redirectTo: '' },
 ];
